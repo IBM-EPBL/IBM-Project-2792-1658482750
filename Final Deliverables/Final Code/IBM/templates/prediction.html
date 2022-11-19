@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Result of Application</title>
+
+    <!-- Font Icon -->
+    <link rel="stylesheet" href="../static/fonts/material-icon/css/material-design-iconic-font.min.css">
+    <!-- Main css -->
+    <link rel="stylesheet" href="../static/styles/prediction.css">
+</head>
+<body>
+
+    <div class="main">
+
+        <!-- Prediction status -->
+        <section class="sign-in">
+            <div class="container">
+                <div class="signin-content" >
+                    <div class="signin-image">
+                        <figure><img src="../static/images/loan-manager.jpg" alt="Loan-Status image"></figure>
+                    </div>
+
+                    <div class="signin-form">
+                        <h2 class="form-title" style="font-size:2rem ;">Application Status</h2>
+                        <a style="text-align:justify;">Our Loan approval system will give you the most effective classification of loan approval status according to the Debator's Details. We used <b>XGBoost</b>. The results are displaying below.</a>
+                        </br></br> <b style="color: red;">{{ prediction }}</b>
+                        
+                        </br></br>
+                        <div class="form-group">
+                            <label for="agree-term" class="label-agree-term"><span><span></span></span>
+                                <a href="{{url_for('home')}}" class="term-service">Back to Home</a>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+</body>
+</html>
