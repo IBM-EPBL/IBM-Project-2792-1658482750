@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Home page | Teckton</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- <link rel="stylesheet" href= "{{ url_for('static',filename='styles/style.css') }}"> -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="../static/styles/style.css">
+<style>
+    body{
+        margin-top: 0;
+    }
+</style>
+</head>
+
+<body >
+    <div class="dropdown">
+    <nav>
+        <h4>IBM Loan Lender</h4>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Account</a>
+                <ul class="dropdwn">
+                    <li><a href="#">My Profile</a></li>
+                    <li><a href="#">Log Out</a></li>
+                </ul>
+            </li>
+            <li><a href="#">About</a>
+                <ul class="dropdwn">
+                    <li><a href="#">Developer</a></li>
+                    <li><a href="#">Preference</a></li>
+                    <li><a href="#">reference</a></li>
+                </ul>
+
+            </li>
+        </ul>
+    </nav>
+    </div>
+    <div class="container mt-4"></div>
+    <div class="container-expl">
+        <small style="font-size: 30px;">Welcome to Our</small>
+            <br>
+        <h1 style="color:#2f3c6e; letter-spacing: 1.5px;">IBM Smart Loan Lender Interface</h1>
+        
+        <div style="width: 530px; font-size: medium;">
+            <p style="text-align: justify;">Digitalized Loan Approval Application Using XGBoost Algorithm. Apply Loan Comfortly from home without paper documents
+            Cryptography-Fernet Encryption Helps us to improve the performance of the application.
+            </p>
+        </div>
+        <br>
+        <form action="http://127.0.0.1:5000/application">
+            <button class="butn" >Apply Loan Application</button>
+        </form>
+        
+    </div>
+    <div class="choose-file">
+
+        <!-- <form action="/predict", method="post" enctype="multipart/form-data">
+            <br>
+
+            
+            <input type="file" id="actual-btn" hidden/>
+
+            
+            <label style="padding-left : 15px !important;padding-right: 15px !important;" for="actual-btn" >Upload File</label>
+
+            
+            <span id="file-chosen" type="file" name="file">No file chosen</span><br>
+            <input style="background-color: cadetblue; border: none; color: #FFFFFF; padding: 8px; border-radius: 6px;padding-left : 71px !important;padding-right: 71px !important;" type="submit" id="actual-btnn" value="Encrypt File">
+        </form> -->
+        <img src="../static/images/banner.png"  alt="">
+    </div>
+    <script type="text/javascript">
+        const actualBtn = document.getElementById('actual-btn');
+
+        const fileChosen = document.getElementById('file-chosen');
+
+        actualBtn.addEventListener('change', function(){
+          fileChosen.textContent = this.files[0].name
+        })
+    </script>
+</body>
+</html>
